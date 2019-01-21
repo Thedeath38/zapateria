@@ -1,0 +1,50 @@
+[17-Jan-2019 17:04:46 UTC] PHP Fatal error:  Uncaught Error: Class 'izv\model\UserModel' not found in /home/ubuntu/workspace/Zapateria/classes/izv/mvc/FrontController.php:14
+Stack trace:
+#0 /home/ubuntu/workspace/Zapateria/c9.php(24): izv\mvc\FrontController->__construct('-', '')
+#1 {main}
+  thrown in /home/ubuntu/workspace/Zapateria/classes/izv/mvc/FrontController.php on line 14
+[17-Jan-2019 17:05:11 UTC] PHP Fatal error:  Uncaught Error: Class 'izv\model\UserModel' not found in /home/ubuntu/workspace/zapateria/classes/izv/mvc/FrontController.php:14
+Stack trace:
+#0 /home/ubuntu/workspace/zapateria/c9.php(24): izv\mvc\FrontController->__construct('-', '')
+#1 {main}
+  thrown in /home/ubuntu/workspace/zapateria/classes/izv/mvc/FrontController.php on line 14
+[17-Jan-2019 17:05:55 UTC] PHP Fatal error:  Uncaught Error: Class 'izv\model\UserModel' not found in /home/ubuntu/workspace/zapateria/classes/izv/mvc/FrontController.php:14
+Stack trace:
+#0 /home/ubuntu/workspace/zapateria/c9.php(24): izv\mvc\FrontController->__construct('-', '')
+#1 {main}
+  thrown in /home/ubuntu/workspace/zapateria/classes/izv/mvc/FrontController.php on line 14
+[17-Jan-2019 17:06:49 UTC] PHP Fatal error:  Uncaught Error: Class 'izv\model\UserModel' not found in /home/ubuntu/workspace/zapateria/classes/izv/mvc/FrontController.php:14
+Stack trace:
+#0 /home/ubuntu/workspace/zapateria/c9.php(24): izv\mvc\FrontController->__construct('-', '')
+#1 {main}
+  thrown in /home/ubuntu/workspace/zapateria/classes/izv/mvc/FrontController.php on line 14
+[17-Jan-2019 17:07:23 UTC] PHP Fatal error:  Uncaught Error: Class 'izv\model\UserModel' not found in /home/ubuntu/workspace/zapateria/classes/izv/mvc/FrontController.php:14
+Stack trace:
+#0 /home/ubuntu/workspace/zapateria/c9.php(24): izv\mvc\FrontController->__construct('-', '')
+#1 {main}
+  thrown in /home/ubuntu/workspace/zapateria/classes/izv/mvc/FrontController.php on line 14
+[17-Jan-2019 17:08:18 UTC] PHP Fatal error:  Uncaught Error: Class 'izv\model\UserModel' not found in /home/ubuntu/workspace/zapateria/classes/izv/mvc/FrontController.php:14
+Stack trace:
+#0 /home/ubuntu/workspace/zapateria/c9.php(24): izv\mvc\FrontController->__construct('index', '')
+#1 {main}
+  thrown in /home/ubuntu/workspace/zapateria/classes/izv/mvc/FrontController.php on line 14
+[17-Jan-2019 17:09:35 UTC] PHP Fatal error:  Uncaught Error: Class 'izv\model\UserModel' not found in /home/ubuntu/workspace/zapateria/classes/izv/mvc/FrontController.php:14
+Stack trace:
+#0 /home/ubuntu/workspace/zapateria/c9.php(24): izv\mvc\FrontController->__construct('index', '')
+#1 {main}
+  thrown in /home/ubuntu/workspace/zapateria/classes/izv/mvc/FrontController.php on line 14
+[17-Jan-2019 17:09:39 UTC] PHP Fatal error:  Uncaught Error: Class 'izv\model\UserModel' not found in /home/ubuntu/workspace/zapateria/classes/izv/mvc/FrontController.php:14
+Stack trace:
+#0 /home/ubuntu/workspace/zapateria/c9.php(24): izv\mvc\FrontController->__construct('-', '')
+#1 {main}
+  thrown in /home/ubuntu/workspace/zapateria/classes/izv/mvc/FrontController.php on line 14
+[17-Jan-2019 17:09:46 UTC] PHP Fatal error:  Uncaught Error: Class 'izv\model\UserModel' not found in /home/ubuntu/workspace/zapateria/classes/izv/mvc/FrontController.php:14
+Stack trace:
+#0 /home/ubuntu/workspace/zapateria/c9.php(24): izv\mvc\FrontController->__construct('-', '')
+#1 {main}
+  thrown in /home/ubuntu/workspace/zapateria/classes/izv/mvc/FrontController.php on line 14
+[17-Jan-2019 17:12:17 UTC] PHP Fatal error:  Uncaught Error: Class 'izv\model\UserModel' not found in /home/ubuntu/workspace/zapateria/classes/izv/mvc/FrontController.php:14
+Stack trace:
+#0 /home/ubuntu/workspace/zapateria/c9.php(24): izv\mvc\FrontController->__construct('-', '')
+#1 {main}
+  thrown in /home/ubuntu/workspace/zapateria/classes/izv/mvc/FrontController.php on line 14
