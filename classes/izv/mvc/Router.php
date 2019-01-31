@@ -7,7 +7,7 @@ class Router{
     
     function __construct($ruta){
         $this->rutas = array(
-            "index" => new Route("Model","View","Controller")
+            "index" => new Route("Model","TiendaView","Controller")
         );
         $this->ruta = $ruta;
     }

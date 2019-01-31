@@ -1,0 +1,2 @@
+[25-Jan-2019 10:07:53 UTC] PHP Warning:  require_once(../vendor/autoload.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/classes/izv/cli_doctrine/bootstrap.php on line 3
+[25-Jan-2019 10:07:53 UTC] PHP Fatal error:  require_once(): Failed opening required '../vendor/autoload.php' (include_path='.:/usr/share/php') in /home/ubuntu/workspace/classes/izv/cli_doctrine/bootstrap.php on line 3

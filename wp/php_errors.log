@@ -1,0 +1,2 @@
+[28-Jan-2019 11:25:31 UTC] PHP Warning:  require_once(templates/custom-fields.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/wp/wp-content/themes/medic/functions.php on line 9
+[28-Jan-2019 11:25:31 UTC] PHP Fatal error:  require_once(): Failed opening required 'templates/custom-fields.php' (include_path='.:/usr/share/php') in /home/ubuntu/workspace/wp/wp-content/themes/medic/functions.php on line 9
