@@ -1,0 +1,26 @@
+.dialog_user{
+    display: none;
+    position: fixed;
+    right: 1%;
+    top: 85px;
+    background-color: white;
+    border-radius: 5px;
+    width: 15%;
+    /*z-index: 0;*/
+    opacity: 0.9;
+}
+
+.dialog_user>div{
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.dialog_user>div>a{
+    color: black;
+    font-size: 14pt;
+}
+
+.dialog_user_hidden{
+    display: block;
+}

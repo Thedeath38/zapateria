@@ -11,103 +11,151 @@
   
 
 <!--header top-->
-<div class="header-top">
-      <div class="container clearfix">
-            <div class="top-left">
-                  <h6>Opening Hours : Saturday to Tuesday - 8am to 10pm</h6>
-            </div>
-            <div class="top-right">
-                  <ul class="social-links">
-                        <li>
-                              <a href="#">
-                                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                              </a>
-                        </li>
-                        <li>
-                              <a href="#">
-                                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                              </a>
-                        </li>
-                        <li>
-                              <a href="#">
-                                    <i class="fa fa-google-plus" aria-hidden="true"></i>
-                              </a>
-                        </li>
-                        <li>
-                              <a href="#">
-                                    <i class="fa fa-instagram" aria-hidden="true"></i>
-                              </a>
-                        </li>
-                        <li>
-                              <a href="#">
-                                    <i class="fa fa-pinterest-p" aria-hidden="true"></i>
-                              </a>
-                        </li>
-                  </ul>
-            </div>
-      </div>
-</div>
+<!--<div class="header-top">-->
+<!--      <div class="container clearfix">-->
+<!--            <div class="top-left">-->
+<!--                  <h6>Opening Hours : Saturday to Tuesday - 8am to 10pm</h6>-->
+<!--            </div>-->
+<!--            <div class="top-right">-->
+<!--                  <ul class="social-links">-->
+<!--                        <li>-->
+<!--                              <a href="#">-->
+<!--                                    <i class="fa fa-facebook" aria-hidden="true"></i>-->
+<!--                              </a>-->
+<!--                        </li>-->
+<!--                        <li>-->
+<!--                              <a href="#">-->
+<!--                                    <i class="fa fa-twitter" aria-hidden="true"></i>-->
+<!--                              </a>-->
+<!--                        </li>-->
+<!--                        <li>-->
+<!--                              <a href="#">-->
+<!--                                    <i class="fa fa-google-plus" aria-hidden="true"></i>-->
+<!--                              </a>-->
+<!--                        </li>-->
+<!--                        <li>-->
+<!--                              <a href="#">-->
+<!--                                    <i class="fa fa-instagram" aria-hidden="true"></i>-->
+<!--                              </a>-->
+<!--                        </li>-->
+<!--                        <li>-->
+<!--                              <a href="#">-->
+<!--                                    <i class="fa fa-pinterest-p" aria-hidden="true"></i>-->
+<!--                              </a>-->
+<!--                        </li>-->
+<!--                  </ul>-->
+<!--            </div>-->
+<!--      </div>-->
+<!--</div>-->
 <!--header top-->
 
 <!--Header Upper-->
-<section class="header-uper">
-      <div class="container clearfix">
-            <div class="logo">
-                  <figure>
-                        <a href="index.html">
-                              <img src="images/logo.png" alt="" width="130">
-                        </a>
-                  </figure>
-            </div>
-            <div class="right-side">
-                  <ul class="contact-info">
-                        <li class="item">
-                              <div class="icon-box">
-                                    <i class="fa fa-envelope-o"></i>
-                              </div>
-                              <strong>Email</strong>
-                              <br>
-                              <a href="#">
-                                    <span>info@medic.com</span>
-                              </a>
-                        </li>
-                        <li class="item">
-                              <div class="icon-box">
-                                    <i class="fa fa-phone"></i>
-                              </div>
-                              <strong>Call Now</strong>
-                              <br>
-                              <span>+ (88017) - 123 - 4567</span>
-                        </li>
-                  </ul>
-                  <div class="link-btn">
-                        <a href="#" class="btn-style-one">Appoinment</a>
-                  </div>
-            </div>
-      </div>
-</section>
+<!--<section class="header-uper">-->
+<!--      <div class="container clearfix">-->
+<!--            <div class="logo">-->
+<!--                  <figure>-->
+<!--                        <a href="index.html">-->
+<!--                              <img src="<?php echo get_template_directory_uri();?>/images/logo.png" alt="" width="130">-->
+<!--                        </a>-->
+<!--                  </figure>-->
+<!--            </div>-->
+<!--            <div class="right-side">-->
+<!--                  <ul class="contact-info">-->
+<!--                        <li class="item">-->
+<!--                              <div class="icon-box">-->
+<!--                                    <i class="fa fa-envelope-o"></i>-->
+<!--                              </div>-->
+<!--                              <strong>Email</strong>-->
+<!--                              <br>-->
+<!--                              <a href="#">-->
+<!--                                    <span>info@medic.com</span>-->
+<!--                              </a>-->
+<!--                        </li>-->
+<!--                        <li class="item">-->
+<!--                              <div class="icon-box">-->
+<!--                                    <i class="fa fa-phone"></i>-->
+<!--                              </div>-->
+<!--                              <strong>Call Now</strong>-->
+<!--                              <br>-->
+<!--                              <span>+ (88017) - 123 - 4567</span>-->
+<!--                        </li>-->
+<!--                  </ul>-->
+<!--                  <div class="link-btn">-->
+<!--                        <a href="#" class="btn-style-one">Appoinment</a>-->
+<!--                  </div>-->
+<!--            </div>-->
+<!--      </div>-->
+<!--</section>-->
 <!--Header Upper-->
 
 
 <!--Main Header-->
 <?php get_template_part('templates/nav', 'front'); ?>
 <!--End Main Header -->
+<!--dialogo-->
+<div class="modal fade" id="miModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel">Ingresar</h4>
+			</div>
+			<div class="modal-body">
+			    <div class="form-group">
+                    
+                
+			    <?php
+				//   if(!is_user_logged_in()){
+                    $args = array(
+                    'redirect' => admin_url(), 
+                    'form_id' => 'loginform-custom',
+                    'label_username' => __( 'Usuario' ),
+                    'label_password' => __( 'Contraseña' ),
+                    'label_remember' => __( 'Recordar' ),
+                    'label_log_in' => __( 'Acceder' ),
+                    'remember' => true
+                );
+                    wp_login_form($args);
+                    ?>
+                    </div>
+                    <?php
+                    wp_register('<span>','</span>',true);
+                    
+                // }else{
+                //     $user=wp_get_current_user();
+                //     $rol=get_author_role($user->ID);
+                //     echo $rol;
+                //     
+                ?>
+                     <br><a href="<?php echo wp_logout_url(get_permalink());?>">Cerrar Sesion</a>
+                     
+                
+                
+                
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--fin dialogo-->
 
 <!--=================================
 =            Page Slider            =
 ==================================-->
 <div class="hero-slider">
     <!-- Slider Item -->
-    <div class="slider-item slide1" style="background-image:url(images/slider/slider-bg-1.jpg)">
+    <div class="slider-item slide1" style="background-image:url(<?php echo get_template_directory_uri();?>/images/slider/sliderTacones.jpg)">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <!-- Slide Content Start -->
                     <div class="content style text-center">
-                        <h2 class="text-white text-bold mb-2">Our Best Surgeons</h2>
+                        <h2 class="text-white text-bold mb-2">Nueva temporada</h2>
                         <p class="tag-text mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel sunt animi sequi ratione quod at earum. <br>
                              Quis quos officiis numquam!</p>
-                        <a href="#" class="btn btn-main btn-white">explore</a>
+                        <a href="#" class="btn btn-main btn-white">shop-now</a>
                     </div>
                     <!-- Slide Content End -->
                 </div>
@@ -115,13 +163,13 @@
         </div>
     </div>
     <!-- Slider Item -->
-    <div class="slider-item" style="background-image:url(images/slider/slider-bg-2.jpg);">
+    <div class="slider-item" style="background-image:url(<?php echo get_template_directory_uri();?>/images/slider/sliderZapas.jpg);">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <!-- Slide Content Start-->
                     <div class="content style text-right">
-                        <h2 class="text-white">We Care About <br>Your Health</h2>
+                        <h2 class="text-white">La comodidad <br>es importante</h2>
                         <p class="tag-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
                         <a href="#" class="btn btn-main btn-white">about us</a>
                     </div>
@@ -131,7 +179,7 @@
         </div>
     </div>
     <!-- Slider Item -->
-    <div class="slider-item" style="background-image:url(images/slider/slider-bg-3.jpg)">
+    <div class="slider-item" style="background-image:url(<?php echo get_template_directory_uri();?>/images/slider/sliderNike.jpg)">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -140,7 +188,7 @@
                         <h2 class="text-white text-bold mb-2">Best Medical Services</h2>
                         <p class="tag-text mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae deserunt, 
                             <br>eius pariatur minus itaque nostrum.</p>
-                        <a href="shop.html" class="btn btn-main btn-white">shop now</a>
+                        <a href="#" class="btn btn-main btn-white">Tienda</a>
                     </div>
                     <!-- Slide Content End -->
                 </div>
@@ -158,9 +206,9 @@
                 <div class="cta-block">
                     <div class="emmergency item">
                         <i class="fa fa-phone"></i>
-                        <h2>Emegency Cases</h2>
-                        <a href="#">1-800-700-6200</a>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                        <h2>Atención al cliente</h2>
+                        <a href="#">958827381</a>
+                        <p>Contacte con nosotros para cualquier incidencia</p>
                     </div>
                     <div class="top-doctor item">
                         <i class="fa fa-stethoscope"></i>
@@ -170,11 +218,11 @@
                     </div>
                     <div class="working-time item">
                         <i class="fa fa-hourglass-o"></i>
-                        <h2>Working Hours</h2>
+                        <h2>Horario de apertura</h2>
                         <ul class="w-hours">
-                            <li>Mon - Fri  - <span>8:00 - 17:00</span></li>
-                            <li>Mon - Fri  - <span>8:00 - 17:00</span></li>
-                            <li>Mon - Fri  - <span>8:00 - 17:00</span></li>
+                            <li>Lun - Vi  - <span>8:00 - 17:00</span></li>
+                            <li>Sab - Dom  - <span>8:00 - 17:00</span></li>
+                            
                         </ul>
                     </div>
                 </div>
@@ -184,261 +232,7 @@
 </section>
 
 <!--about section-->
-<section class="feature-section section bg-gray">
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-12 col-xs-12">
-				<div class="image-content">
-					<div class="section-title text-center">
-						<h3>Best Features
-							<span>of Our Hospital</span>
-						</h3>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam magni in at debitis <br>
-							nam error officia vero tempora alias? Sunt?</p>
-					</div>
-					<div class="row">
-						<div class="col-sm-6">
-							<div class="item">
-								<div class="icon-box">
-									<figure>
-										<a href="#">
-											<img src="images/resource/1.png" alt="">
-										</a>
-									</figure>
-								</div>
-								<h6>Orthopedics</h6>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ducimus veniam illo quibusdam pariatur ex sunt, est aspernatur 
-									at debitis eius vitae vel nostrum dolorem labore autem corrupti odit mollitia?</p>
-							</div>
-						</div>
-						<div class="col-sm-6">
-							<div class="item">
-								<div class="icon-box">
-									<figure>
-										<a href="#">
-											<img src="images/resource/2.png" alt="">
-										</a>
-									</figure>
-								</div>
-								<h6>Diaginostic</h6>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ducimus veniam illo quibusdam pariatur ex sunt, est aspernatur
-								at debitis eius vitae vel nostrum dolorem labore autem corrupti odit mollitia?</p>
-							</div>
-						</div>
-						<div class="col-sm-6">
-							<div class="item">
-								<div class="icon-box">
-									<figure>
-										<a href="#">
-											<img src="images/resource/3.png" alt="">
-										</a>
-									</figure>
-								</div>
-								<h6>Psycology</h6>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ducimus veniam illo quibusdam pariatur ex sunt, est aspernatur
-								at debitis eius vitae vel nostrum dolorem labore autem corrupti odit mollitia?</p>
-							</div>
-						</div>
-						<div class="col-sm-6">
-							<div class="item">
-								<div class="icon-box">
-									<figure>
-										<a href="#">
-											<img src="images/resource/4.png" alt="">
-										</a>
-									</figure>
-								</div>
-								<h6>General Treatment</h6>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ducimus veniam illo quibusdam pariatur ex sunt, est aspernatur
-								at debitis eius vitae vel nostrum dolorem labore autem corrupti odit mollitia?</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-<!--End about section-->
 
-<!--Start about us area-->
-<section class="service-tab-section section">
-    <div class="outer-box clearfix">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <!-- Nav tabs -->
-                    <div class="tabs">
-                        <ul class="nav nav-tabs" role="tablist">
-                            <li role="presentation" class="active">
-                                <a href="#dormitory"  data-toggle="tab">dormitory</a>
-                            </li>
-                            <li role="presentation">
-                                <a href="#orthopedic" data-toggle="tab">orthopedic</a>
-                            </li>
-                            <li role="presentation">
-                                <a href="#sonogram" data-toggle="tab">sonogram</a>
-                            </li>
-                            <li role="presentation">
-                                <a href="#x-ray" data-toggle="tab">x-ray</a>
-                            </li>
-                            <li role="presentation">
-                                <a href="#diagnostic" data-toggle="tab">diagnostic</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!--Start single tab content-->
-                    <div class="tab-content">
-                        <div class="service-box tab-pane fade in active row" id="dormitory">
-                            <div class="col-md-6">
-                                <img class="img-responsive" src="images/services/service-one.jpg" alt="service-image">
-                            </div>
-                            <div class="col-md-6">
-                                <div class="contents">
-                                    <div class="section-title">
-                                        <h3>dormitory</h3>
-                                    </div>
-                                    <div class="text">
-                                        <p>The implant fixture is first placed, so that it ilikely to osseointegrate, then a dental prosthetic is added. then a
-                                            dental prosthetic is added.then a dental pros- thetic is added.</p>
-                                            <p>The implant fixture is first placed, so that it ilikely to osseointegrate, then a dental prosthetic is added. then a dental
-                                                prosthetic is added.then a dental pros- thetic is added.</p>
-                                    </div>
-                                    <ul class="content-list">
-                                        <li>
-                                            <i class="fa fa-dot-circle-o"></i>Whitening is among the most popular dental</li>
-                                        <li>
-                                            <i class="fa fa-dot-circle-o"></i>Teeth cleaning is part of oral hygiene and involves</li>
-                                        <li>
-                                            <i class="fa fa-dot-circle-o"></i>Teeth cleaning is part of oral hygiene and involves</li>
-                                    </ul>
-                                    <a href="#" class="btn btn-style-one">Read more</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!--End single tab content-->
-                        <!--Start single tab content-->
-                        <div class="service-box tab-pane fade in" id="orthopedic">
-                            <div class="col-md-6">
-                                <img class="img-responsive" src="images/services/service-two.jpg" alt="service-image">
-                            </div>
-                            <div class="col-md-6">
-                                <div class="contents">
-                                    <div class="section-title">
-                                        <h3>orthopedic</h3>
-                                    </div>
-                                    <div class="text">
-                                        <p>The implant fixture is first placed, so that it ilikely to osseointegrate, then a dental prosthetic is added.
-                                            then a dental prosthetic is added.then a dental pros- thetic is added.</p>
-                                        <p>The implant fixture is first placed, so that it ilikely to osseointegrate, then a dental prosthetic is added.
-                                            then a dental prosthetic is added.then a dental pros- thetic is added.</p>
-                                    </div>
-                                    <ul class="content-list">
-                                        <li>
-                                            <i class="fa fa-dot-circle-o"></i>Whitening is among the most popular dental</li>
-                                        <li>
-                                            <i class="fa fa-dot-circle-o"></i>Teeth cleaning is part of oral hygiene and involves</li>
-                                        <li>
-                                            <i class="fa fa-dot-circle-o"></i>Teeth cleaning is part of oral hygiene and involves</li>
-                                    </ul>
-                                    <a href="#" class="btn btn-style-one">Read more</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!--End single tab content-->
-                        <!--Start single tab content-->
-                        <div class="service-box tab-pane fade in" id="sonogram">
-                            <div class="col-md-6">
-                                <img class="img-responsive" src="images/services/service-three.jpg" alt="service-image">
-                            </div>
-                            <div class="col-md-6">
-                                <div class="contents">
-                                    <div class="section-title">
-                                        <h3>sonogram</h3>
-                                    </div>
-                                    <div class="text">
-                                        <p>The implant fixture is first placed, so that it ilikely to osseointegrate, then a dental prosthetic is added.
-                                            then a dental prosthetic is added.then a dental pros- thetic is added.</p>
-                                        <p>The implant fixture is first placed, so that it ilikely to osseointegrate, then a dental prosthetic is added.
-                                            then a dental prosthetic is added.then a dental pros- thetic is added.</p>
-                                    </div>
-                                    <ul class="content-list">
-                                        <li>
-                                            <i class="fa fa-dot-circle-o"></i>Whitening is among the most popular dental</li>
-                                        <li>
-                                            <i class="fa fa-dot-circle-o"></i>Teeth cleaning is part of oral hygiene and involves</li>
-                                        <li>
-                                            <i class="fa fa-dot-circle-o"></i>Teeth cleaning is part of oral hygiene and involves</li>
-                                    </ul>
-                                    <a href="#" class="btn btn-style-one">Read more</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!--End single tab content-->
-                        <!--Start single tab content-->
-                        <div class="service-box tab-pane fade in" id="x-ray">
-                            <div class="col-md-6">
-                                <img class="img-responsive" src="images/services/service-four.jpg" alt="service-image">
-                            </div>
-                            <div class="col-md-6">
-                                <div class="contents">
-                                    <div class="section-title">
-                                        <h3>x-ray</h3>
-                                    </div>
-                                    <div class="text">
-                                        <p>The implant fixture is first placed, so that it ilikely to osseointegrate, then a dental prosthetic is added.
-                                            then a dental prosthetic is added.then a dental pros- thetic is added.</p>
-                                        <p>The implant fixture is first placed, so that it ilikely to osseointegrate, then a dental prosthetic is added.
-                                            then a dental prosthetic is added.then a dental pros- thetic is added.</p>
-                                    </div>
-                                    <ul class="content-list">
-                                        <li>
-                                            <i class="fa fa-dot-circle-o"></i>Whitening is among the most popular dental</li>
-                                        <li>
-                                            <i class="fa fa-dot-circle-o"></i>Teeth cleaning is part of oral hygiene and involves</li>
-                                        <li>
-                                            <i class="fa fa-dot-circle-o"></i>Teeth cleaning is part of oral hygiene and involves</li>
-                                    </ul>
-                                    <a href="#" class="btn btn-style-one">Read more</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!--End single tab content-->
-                        <!--Start single tab content-->
-                        <div class="service-box tab-pane fade in" id="diagnostic">
-                            <div class="col-md-6">
-                                <img class="img-responsive" src="images/services/service-five.jpg" alt="service-image">
-                            </div>
-                            <div class="col-md-6">
-                                <div class="contents">
-                                    <div class="section-title">
-                                        <h3>diagnostic</h3>
-                                    </div>
-                                    <div class="text">
-                                        <p>The implant fixture is first placed, so that it ilikely to osseointegrate, then a dental prosthetic is added.
-                                            then a dental prosthetic is added.then a dental pros- thetic is added.</p>
-                                        <p>The implant fixture is first placed, so that it ilikely to osseointegrate, then a dental prosthetic is added.
-                                            then a dental prosthetic is added.then a dental pros- thetic is added.</p>
-                                    </div>
-                                    <ul class="content-list">
-                                        <li>
-                                            <i class="fa fa-dot-circle-o"></i>Whitening is among the most popular dental</li>
-                                        <li>
-                                            <i class="fa fa-dot-circle-o"></i>Teeth cleaning is part of oral hygiene and involves</li>
-                                        <li>
-                                            <i class="fa fa-dot-circle-o"></i>Teeth cleaning is part of oral hygiene and involves</li>
-                                    </ul>
-                                    <a href="#" class="btn btn-style-one">Read more</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!--End single tab content-->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 <!--End about us area-->
 
 <!--Service Section-->
@@ -452,11 +246,13 @@
                 fugiat officia corporis rerum eaque neque totam animi, sapiente culpa. Architecto!</p>
         </div>
         <div class="row items-container clearfix">
+            <!--empieza el loop-->
             <div class="item">
                 <div class="inner-box">
+                    
                     <div class="img_holder">
                         <a href="service.html">
-                            <img src="images/gallery/1.jpg" alt="images" class="img-responsive">
+                            <img src="<?php echo get_template_directory_uri();?>/images/gallery/1.jpg" alt="images" class="img-responsive">
                         </a>
                     </div>
                     <div class="image-content text-center">
@@ -468,11 +264,12 @@
                     </div>
                 </div>
             </div>
+            <!--fin loop-->
             <div class="item">
                 <div class="inner-box">
                     <div class="img_holder">
                         <a href="service.html">
-                            <img src="images/gallery/2.jpg" alt="images" class="img-responsive">
+                            <img src="<?php echo get_template_directory_uri();?>/images/gallery/2.jpg" alt="images" class="img-responsive">
                         </a>
                     </div>
                     <div class="image-content text-center">
@@ -504,7 +301,7 @@
                 <div class="inner-box">
                     <div class="img_holder">
                         <a href="service.html">
-                            <img src="images/gallery/1.jpg" alt="images" class="img-responsive">
+                            <img src="<?php echo get_template_directory_uri();?>/images/gallery/1.jpg" alt="images" class="img-responsive">
                         </a>
                     </div>
                     <div class="image-content text-center">
@@ -520,7 +317,7 @@
                 <div class="inner-box">
                     <div class="img_holder">
                         <a href="service.html">
-                            <img src="images/gallery/2.jpg" alt="images" class="img-responsive">
+                            <img src="<?php echo get_template_directory_uri();?>/images/gallery/2.jpg" alt="images" class="img-responsive">
                         </a>
                     </div>
                     <div class="image-content text-center">
@@ -536,7 +333,7 @@
                 <div class="inner-box">
                     <div class="img_holder">
                         <a href="service.html">
-                            <img src="images/gallery/3.jpg" alt="images" class="img-responsive">
+                            <img src="<?php echo get_template_directory_uri();?>/images/gallery/3.jpg" alt="images" class="img-responsive">
                         </a>
                     </div>
                     <div class="image-content text-center">
@@ -566,7 +363,7 @@
         <div class="row">
             <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="team-member">
-                    <img src="images/team/doctor-2.jpg" alt="doctor" class="img-responsive">
+                    <img src="<?php echo get_template_directory_uri();?>/images/team/doctor-2.jpg" alt="doctor" class="img-responsive">
                     <div class="contents text-center">
                         <h4>Dr. Robert Barrethion</h4>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos, aspernatur.</p>
@@ -576,7 +373,7 @@
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="team-member">
-                    <img src="images/team/doctor-lab-3.jpg" alt="doctor" class="img-responsive">
+                    <img src="<?php echo get_template_directory_uri();?>/images/team/doctor-lab-3.jpg" alt="doctor" class="img-responsive">
                     <div class="contents text-center">
                         <h4>Dr. Marry Lou</h4>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos, aspernatur.</p>
@@ -586,7 +383,7 @@
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="team-member">
-                    <img src="images/team/event-2.jpg" alt="doctor" class="img-responsive">
+                    <img src="<?php echo get_template_directory_uri();?>/images/team/event-2.jpg" alt="doctor" class="img-responsive">
                     <div class="contents text-center">
                         <h4>Dr. Sansa Stark</h4>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos, aspernatur.</p>
@@ -613,7 +410,7 @@
                 <div class="inner-box text-center">
                     <div class="image-box">
                         <figure>
-                            <img src="images/testimonials/1.png" alt="">
+                            <img src="<?php echo get_template_directory_uri();?>/images/testimonials/1.png" alt="">
                         </figure>
                     </div>
                     <h6>Adam Rose</h6>
@@ -625,7 +422,7 @@
                 <div class="inner-box text-center">
                     <div class="image-box">
                         <figure>
-                            <img src="images/testimonials/2.png" alt="">
+                            <img src="<?php echo get_template_directory_uri();?>/images/testimonials/2.png" alt="">
                         </figure>
                     </div>
                     <h6>David Warner</h6>
@@ -637,7 +434,7 @@
                 <div class="inner-box text-center">
                     <div class="image-box">
                         <figure>
-                            <img src="images/testimonials/3.png" alt="">
+                            <img src="<?php echo get_template_directory_uri();?>/images/testimonials/3.png" alt="">
                         </figure>
                     </div>
                     <h6>Amy Adams</h6>
@@ -649,7 +446,7 @@
                 <div class="inner-box text-center">
                     <div class="image-box">
                         <figure>
-                            <img src="images/testimonials/1.png" alt="">
+                            <img src="<?php echo get_template_directory_uri();?>/images/testimonials/1.png" alt="">
                         </figure>
                     </div>
                     <h6>Adam Rose</h6>
@@ -661,7 +458,7 @@
                 <div class="inner-box text-center">
                     <div class="image-box">
                         <figure>
-                            <img src="images/testimonials/2.png" alt="">
+                            <img src="<?php echo get_template_directory_uri();?>/images/testimonials/2.png" alt="">
                         </figure>
                     </div>
                     <h6>David Warner</h6>
@@ -673,7 +470,7 @@
                 <div class="inner-box text-center">
                     <div class="image-box">
                         <figure>
-                            <img src="images/testimonials/3.png" alt="">
+                            <img src="<?php echo get_template_directory_uri();?>/images/testimonials/3.png" alt="">
                         </figure>
                     </div>
                     <h6>Amy Adams</h6>
@@ -685,7 +482,7 @@
                 <div class="inner-box text-center">
                     <div class="image-box">
                         <figure>
-                            <img src="images/testimonials/1.png" alt="">
+                            <img src="<?php echo get_template_directory_uri();?>/images/testimonials/1.png" alt="">
                         </figure>
                     </div>
                     <h6>Adam Rose</h6>
@@ -697,7 +494,7 @@
                 <div class="inner-box text-center">
                     <div class="image-box">
                         <figure>
-                            <img src="images/testimonials/2.png" alt="">
+                            <img src="<?php echo get_template_directory_uri();?>/images/testimonials/2.png" alt="">
                         </figure>
                     </div>
                     <h6>David Warner</h6>
@@ -709,7 +506,7 @@
                 <div class="inner-box text-center">
                     <div class="image-box">
                         <figure>
-                            <img src="images/testimonials/3.png" alt="">
+                            <img src="<?php echo get_template_directory_uri();?>/images/testimonials/3.png" alt="">
                         </figure>
                     </div>
                     <h6>Amy Adams</h6>
@@ -862,7 +659,7 @@
             <div class="footer-logo">
               <figure>
                 <a href="index.html">
-                  <img src="images/logo-2.png" alt="">
+                  <img src="<?php echo get_template_directory_uri();?>/images/logo-2.png" alt="">
                 </a>
               </figure>
             </div>
@@ -924,7 +721,7 @@
                 <div class="media">
                   <div class="media-left">
                     <a href="#">
-                      <img class="media-object" src="images/blog/post-thumb-small.jpg" alt="post-thumb">
+                      <img class="media-object" src="<?php echo get_template_directory_uri();?>/images/blog/post-thumb-small.jpg" alt="post-thumb">
                     </a>
                   </div>
                   <div class="media-body">
@@ -937,7 +734,7 @@
                 <div class="media">
                   <div class="media-left">
                     <a href="#">
-                      <img class="media-object" src="images/blog/post-thumb-small.jpg" alt="post-thumb">
+                      <img class="media-object" src="<?php echo get_template_directory_uri();?>/images/blog/post-thumb-small.jpg" alt="post-thumb">
                     </a>
                   </div>
                   <div class="media-body">

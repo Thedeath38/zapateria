@@ -1,0 +1,79 @@
+{% extends '_base.twig' %}
+{% block startDialog %}
+    <!--Dialogos-->
+    <!-- modal login-->
+    <div class="modal fade" id="modallogin" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h3 class="modal-title">Iniciar sesion</h3>
+                </div>
+                <div class="modal-body">
+                    <form action="index/dologin" method="post" id="fLogin">
+                        <input class="form-control" type="text" name="aliascorreo" required placeholder="Correo / Alias"/>
+                        <br>
+                        <input class="form-control" type="password" name="clave" required placeholder="Clave de acceso"/>
+                    </form>
+                    <br/>
+                    <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#modalregister"><h6>No estoy registrado</h6></a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="submit" form="fLogin" class="btn btn-primary" id="btLogin">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- fin modal login-->
+    <!-- modal Register-->
+    <div class="modal fade" id="modalregister" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Registro</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="index/doregister" method="post" id="fRegister">
+                        <input class="form-control" type="text" name="nombre" required placeholder="Nombre"/>
+                        <br>
+                        <input class="form-control" type="text" name="alias" required placeholder="Alias"/>
+                        <br>
+                        <input class="form-control" type="email" name="correo" required placeholder="Correo electrónico"/>
+                        <br>
+                        <input class="form-control" type="email" name="correo2" required placeholder="Repetir correo electrónico"/>
+                        <br>
+                        <input class="form-control" type="password" name="clave" required placeholder="Clave de acceso"/>
+                        <br>
+                        <input class="form-control" type="password" name="clave2" required placeholder="Repetir clave de acceso"/>
+    					<br/>
+                        <h6>
+                        	<input type="checkbox" name="privacy_policy" value="true"/> Entiende y acepta nuestras Condiciones de uso y venta. Consulta nuestro Aviso de privacidad, 
+                        	nuestro Aviso de Cookies y nuestro Aviso sobre publicidad basada en los intereses del usuario. 
+                        </h6>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="submit" form="fRegister" class="btn btn-primary" id="btRegister">Registrarse</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- fin modal Register-->
+    <!--//Dialogos-->
+{% endblock %}
+
+{% block navBtUser %}
+    <div class="mobile-nav-button">
+    	<button id="trigger-overlay" data-toggle="modal" data-target="#modallogin" href="#"><i class="fa fa-user-o" aria-hidden="true"></i></button>
+    </div>
+{% endblock %}
+
+{% block dialog_user_menu %}
+{% endblock %}

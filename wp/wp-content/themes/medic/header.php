@@ -10,6 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
+  
   	<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css">
   <!-- Slick Carousel -->
   <!--<link rel="stylesheet" href="plugins/slick/slick.css">-->

@@ -3,23 +3,26 @@
 namespace izv\data;
 
 /**
- * Destinatario
+ * @Entity @Table(name="destinatario")
  */
 class Destinatario
 {
+    use \izv\common\Common;
+    
     /**
-     * @var integer
+     * @Id
+     * @Column(type="integer") @GeneratedValue
      */
     private $id;
-
+    
     /**
-     * @var string
+     * @Column(type="string", length=50, unique=true, nullable=false)
      */
     private $nombre;
-
-    /**
-     * @var \Doctrine\Common\Collections\Collection
-     */
+    
+    /** 
+     * @OneToMany(targetEntity="Zapato", mappedBy="destinatario") 
+    */
     private $zapatos;
 
     /**

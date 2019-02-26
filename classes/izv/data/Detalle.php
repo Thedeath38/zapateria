@@ -3,39 +3,42 @@
 namespace izv\data;
 
 /**
- * Detalle
+ * @Entity @Table(name="detalle")
  */
 class Detalle
 {
     /**
-     * @var integer
+     * @Id
+     * @Column(type="integer") @GeneratedValue
      */
     private $id;
-
+    
     /**
-     * @var integer
+     * @ManyToOne(targetEntity="Pedido", inversedBy="detalles")
+     * @JoinColumn(name="idpedido", referencedColumnName="id", nullable=false)
+    */
+    private $pedido;
+    
+    /**
+     * @ManyToOne(targetEntity="Zapato", inversedBy="detalles")
+     * @JoinColumn(name="idzapato", referencedColumnName="id", nullable=false)
+    */
+    private $zapato;
+    
+    /**
+     * @Column(type="smallint", nullable=false, precision=2) 
      */
     private $numero;
-
+    
     /**
-     * @var integer
+     * @Column(type="smallint", nullable=false, precision=2) 
      */
     private $cantidad;
-
+    
     /**
-     * @var string
+     * @Column(type="decimal", nullable=false, precision=7, scale=2) 
      */
     private $precio;
-
-    /**
-     * @var \izv\data\Pedido
-     */
-    private $pedido;
-
-    /**
-     * @var \izv\data\Zapato
-     */
-    private $zapato;
 
 
     /**

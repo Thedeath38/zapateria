@@ -3,62 +3,65 @@
 namespace izv\data;
 
 /**
- * Usuario
+ * @Entity @Table(name="usuario")
  */
-class Usuario
-{
+class Usuario {
+    
+    use \izv\common\Common;
+
     /**
-     * @var integer
+     * @Id
+     * @Column(type="integer") @GeneratedValue
      */
     private $id;
-
+    
     /**
-     * @var string
+     * @Column(type="string", length=30, nullable=true, unique=true)
      */
     private $alias;
-
+    
     /**
-     * @var string
+     * @Column(type="string", length=255, nullable=false)
      */
     private $clave;
-
+    
     /**
-     * @var string
+     * @Column(type="string", length=30, nullable=true)
      */
     private $nombre;
-
+    
     /**
-     * @var string
+     * @Column(type="string", length=60, nullable=true)
      */
     private $apellidos;
-
+    
     /**
-     * @var string
+     * @Column(type="string", length=60, nullable=false, unique=true)
      */
     private $correo;
-
+    
     /**
-     * @var string
+     * @Column(type="string", length=255, nullable=true)
      */
-    private $direccion;
-
+    private $direccion = '';
+    
     /**
-     * @var \DateTime
+     * @Column(type="date", nullable=false)
      */
     private $fechaalta;
-
+    
     /**
-     * @var boolean
+     * @Column(type="boolean", nullable=false, precision=1, options={"default" : 0})
      */
-    private $activo;
+    private $activo = 0;
 
     /**
-     * @var boolean
+     * @Column(type="boolean", nullable=false, precision=1, options={"default" : 0})
      */
-    private $administrador;
-
-    /**
-     * @var \Doctrine\Common\Collections\Collection
+    private $administrador = 0;
+    
+    /** 
+     * @OneToMany(targetEntity="Pedido", mappedBy="usuario") 
      */
     private $pedidos;
 
@@ -67,6 +70,7 @@ class Usuario
      */
     public function __construct()
     {
+        $this->fechaalta = new \DateTime();
         $this->pedidos = new \Doctrine\Common\Collections\ArrayCollection();
     }
 

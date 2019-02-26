@@ -12,7 +12,7 @@
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                  <ul class="nav navbar-nav">
+                  <ul class="nav navbar-nav newnav">
                         <li class="active">
                               <a href="<?php echo get_page_link(get_page_by_title('Inicio')) ?>">Inicio</a>
                         </li>
@@ -31,33 +31,48 @@
                         <li>
                               <a href="<?php echo get_page_link(get_page_by_title('Contacto')) ?>">Contacto</a>
                         </li>
+                        <li>
+                              <a href="#">Tienda</a>
+                        </li>
+                        <!--<li>-->
+                        <!--      <a href="#" data-toggle="modal" data-target="#miModal">-->
+                        <!--        Private-->
+                        <!--      </a>-->
+                        <!--</li>-->
+                        
                        
-                        <!-- <li class="dropdown">
-                              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown
-                                    <span class="caret"></span>
-                              </a>
-                              <ul class="dropdown-menu">
-                                    <li>
-                                          <a href="#">Action</a>
-                                    </li>
-                                    <li>
-                                          <a href="#">Another action</a>
-                                    </li>
-                                    <li>
-                                          <a href="#">Something else here</a>
-                                    </li>
-                                    <li role="separator" class="divider"></li>
-                                    <li>
-                                          <a href="#">Separated link</a>
-                                    </li>
-                                    <li role="separator" class="divider"></li>
-                                    <li>
-                                          <a href="#">One more separated link</a>
-                                    </li>
-                              </ul>
-                        </li> -->
+                        <!--<li class="dropdown">-->
+                        <!--      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown-->
+                        <!--            <span class="caret"></span>-->
+                        <!--      </a>-->
+                        <!--      <ul class="dropdown-menu">-->
+                        <!--            <li>-->
+                        <!--                  <a href="#">Action</a>-->
+                        <!--            </li>-->
+                        <!--            <li>-->
+                        <!--                  <a href="#">Another action</a>-->
+                        <!--            </li>-->
+                        <!--            <li>-->
+                        <!--                  <a href="#">Something else here</a>-->
+                        <!--            </li>-->
+                        <!--            <li role="separator" class="divider"></li>-->
+                        <!--            <li>-->
+                        <!--                  <a href="#">Separated link</a>-->
+                        <!--            </li>-->
+                        <!--            <li role="separator" class="divider"></li>-->
+                        <!--            <li>-->
+                        <!--                  <a href="#">One more separated link</a>-->
+                        <!--            </li>-->
+                        <!--      </ul>-->
+                        <!--</li> -->
                   </ul>
+                  <!--<div class="mobile-nav-button">-->
+                         
+                  <!--</div>-->
             </div>
+            <button class='usuario' data-toggle="modal" data-target="#miModal" href="#">
+                               <i class="fa fa-user-o" aria-hidden="true"></i>
+                        </button>
             <!-- /.navbar-collapse -->
       </div>
       <!-- /.container-fluid -->

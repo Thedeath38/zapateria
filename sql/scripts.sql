@@ -109,7 +109,7 @@ INSERT INTO `mvc`.`categoria` VALUES (NULL, 'zapatos vestir');
 INSERT INTO `mvc`.`categoria` VALUES (NULL, 'zapatos traje');
  
  
-INSERT INTO  `mvc`.`destinatario` VALUES (NULL ,  'hombre');
+INSERT INTO  `mvc`.`destinatario` VALUES (NULL, 'hombre');
 INSERT INTO `mvc`.`destinatario` VALUES (NULL, 'mujer');
 INSERT INTO `mvc`.`destinatario` VALUES (NULL, 'niño');
 INSERT INTO `mvc`.`destinatario` VALUES (NULL, 'niña');
@@ -117,31 +117,35 @@ INSERT INTO `mvc`.`destinatario` VALUES (NULL, 'unisex');
 
 
 INSERT INTO `mvc`.`zapato`  
-VALUES (NULL, 'Colors of California', 'Lara 2', '1', '2', '45', 'Plateado', 'Textil', 'Textil', 'Textil', 'Textil', '36',
+VALUES (NULL, '1', '2','Colors of California', 'Lara 2', '45', 'Plateado', 'Textil', 'Textil', 'Textil', '36',
 '40', 'Para dar buenos alpargatazos a tus niños', '1');
 INSERT INTO `mvc`.`zapato`  
-VALUES (NULL, 'Toms', 'Diego', '1', '1', '64.99', 'Marron', 'Textil', 'Textil', 'Textil', 'Sintetico', '38', '45',
+VALUES (NULL, '1', '1','Toms', 'Diego', '64.99', 'Marron', 'Textil', 'Textil', 'Sintetico', '38', '45',
 'Alpargatas de color marrón perfectas para andar por casa', '1');
 INSERT INTO `mvc`.`zapato`  
-VALUES (NULL, 'Toms', 'Alpargata E', '1', '3', '38', 'Plateado', 'Textil', 'Textil', 'Textil', 'Textil', '16', '26',
+VALUES (NULL, '1', '3','Toms', 'Alpargata E', '38', 'Plateado', 'Textil', 'Textil', 'Textil', '16', '26',
 'Alpargata de color plateado confortable', '1');
 INSERT INTO `mvc`.`zapato`  
-VALUES (NULL, 'Sketchers', 'Breathe-Easy Calmly', '2', '2', '29.90', 'Negro', 'Textil', 'Textil', 'Textil', 'Sintetico',
+VALUES (NULL, '2', '2','Sketchers', 'Breathe-Easy Calmly', '29.90', 'Negro', 'Textil', 'Textil', 'Sintetico',
 '35', '40', 'Bailarina de color negro de material textil muy comodas', '1');
 INSERT INTO `mvc`.`zapato`  
-VALUES (NULL, 'Sketchers', 'Bikers Free Thinker', '2', '2', '35.90', 'Negro', 'Textil', 'Textil', 'Textil', 'Sintetico',
+VALUES (NULL, '2', '2','Sketchers', 'Bikers Free Thinker', '35.90', 'Negro', 'Textil', 'Textil', 'Sintetico',
 '35', '40', 'Bailarinas negras Sketchers faciles de llevar en el bolso', '1');
 INSERT INTO `mvc`.`zapato`  
-VALUES (NULL, 'Bopy', 'Savenay', '2', '4', '40.90', 'Azul', 'Cuero', 'Cuero', 'Cuero', 'Cuero', '15', '26',
+VALUES (NULL, '2', '4', 'Bopy', 'Savenay',  '40.90', 'Azul', 'Cuero', 'Cuero', 'Cuero', '15', '26',
 'Bailarinas ideales para tus niñas', '1');
 INSERT INTO `mvc`.`zapato`  
-VALUES (NULL, 'Pataguas', 'Myne', '3', '1', '125.30', 'Negro', 'Cuero-textil', 'Cuero-textil', 'Cuero-textil', 'Sintetico',
+VALUES (NULL, '3', '2','Pataguas', 'Myne', '125.30', 'Negro', 'Cuero-textil', 'Cuero-textil', 'Sintetico',
 '35', '40', 'Botas altas y caras', '1');
 INSERT INTO `mvc`.`zapato`  
-VALUES (NULL, 'Base', 'London Metal', '3', '1', '87', 'Marron', 'Caucho', 'Caucho', 'Textil', 'Cuero', '37', '45',
+VALUES (NULL, '3', '1','Base', 'London Metal', '87', 'Marron', 'Caucho', 'Textil', 'Cuero', '37', '45',
 'Botas altas de caucho', '1');
 INSERT INTO `mvc`.`zapato`  
-VALUES (NULL, 'UGG', 'Bailey Bow II K', '3', '4', '136', 'Marron', 'Nubuck', 'Nubuck', 'Piel', 'Sintetico', '15', '28',
+VALUES (NULL, '3', '4', 'UGG', 'Bailey Bow II K', '136', 'Marron', 'Nubuck', 'Piel', 'Sintetico', '15', '28',
 'Botas para niñas de piel autentica', '1');
+INSERT INTO `mvc`.`zapato`
+VALUES (NULL, '4', '1', 'Clarks', 'Clarkdale Bud', '98', 'Negro', 'Cuero', 'Cuero', 'Cuero', '35', '45',
+'Zapatillas Clarks de cuero, comodas e ideales para salir', '1');
+
 
 

@@ -3,39 +3,42 @@
 namespace izv\data;
 
 /**
- * Pedido
+ * @Entity @Table(name="pedido")
  */
 class Pedido
 {
+    
     /**
-     * @var integer
+     * @Id
+     * @Column(type="integer") @GeneratedValue
      */
     private $id;
 
     /**
-     * @var \DateTime
+     * @Column(type="datetime", nullable=false)
      */
     private $fecha;
-
+    
     /**
-     * @var string
+     * @ManyToOne(targetEntity="Usuario", inversedBy="pedidos")
+     * @JoinColumn(name="idusuario", referencedColumnName="id", nullable=false)
+    */
+    private $usuario;
+    
+    /**
+     * @Column(type="string", length=16, nullable=false)
      */
     private $tarjeta;
-
+    
     /**
-     * @var string
+     * @Column(type="string", length=5, nullable=false)
      */
     private $fechavalidez;
-
+    
     /**
-     * @var string
+     * @Column(type="string", length=3, nullable=false)
      */
     private $cvv;
-
-    /**
-     * @var \izv\data\Usuario
-     */
-    private $usuario;
 
 
     /**

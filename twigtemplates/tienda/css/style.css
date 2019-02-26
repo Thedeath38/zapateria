@@ -132,7 +132,7 @@ ul.top_icons li a:hover {
 .top_nav_right {
     width: 17%;
     margin-top: 47px;
-    position: absolute;
+    position: fixed;
     z-index: 99;
     right: -2%;
 }

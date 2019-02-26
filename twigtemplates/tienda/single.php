@@ -1,3 +1,20 @@
+<?php
+	
+	require '../../classes/autoload.php';
+	
+use Doctrine\ORM\Tools\Pagination\Paginator;
+
+use izv\data\City;
+use izv\database\Database;
+use izv\managedata\Bootstrap;
+use izv\tools\Pagination;
+use izv\data\Usuario;
+use izv\tools\Util;
+use izv\tools\Reader;
+use izv\model\Model;
+	
+	$id = Reader::read('id');
+?>
 <!--
 author: W3layouts
 author URL: http://w3layouts.com
@@ -8,7 +25,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <html lang="zxx">
 
 <head>
-	<title>Downy Shoes an Ecommerce Category Bootstrap Responsive Website Template | Single :: w3layouts</title>
+	<title>Zapateria ?</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="keywords" content="Downy Shoes Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -45,14 +62,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="wrapper_top_w3layouts">
 			<div class="header_agileits">
 				<div class="logo inner_page_log">
-					<h1><a class="navbar-brand" href="index.html"><span>Downy</span> <i>Shoes</i></a></h1>
+					<h1><a class="navbar-brand" href="../../"><span>Downy</span> <i>Shoes</i></a></h1>
 				</div>
 				<div class="overlay overlay-contentpush">
 					<button type="button" class="overlay-close"><i class="fa fa-times" aria-hidden="true"></i></button>
 
 					<nav>
 						<ul>
-							<li><a href="index.html" class="active">Home</a></li>
+							<li><a href="../../" class="active">Home</a></li>
 							<li><a href="about.html">About</a></li>
 							<li><a href="404.html">Team</a></li>
 							<li><a href="shop.html">Shop Now</a></li>
@@ -96,7 +113,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="inner_breadcrumb_agileits_w3">
 
 				<ul class="short">
-					<li><a href="index.html">Home</a><i>|</i></li>
+					<li><a href="../../">Home</a><i>|</i></li>
 					<li>Single</li>
 				</ul>
 			</div>
@@ -114,13 +131,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 						<ul class="slides">
 							<li data-thumb="images/d2.jpg">
-								<div class="thumb-image"> <img src="images/d2.jpg" data-imagezoom="true" class="img-responsive"> </div>
-							</li>
-							<li data-thumb="images/d1.jpg">
-								<div class="thumb-image"> <img src="images/d1.jpg" data-imagezoom="true" class="img-responsive"> </div>
-							</li>
-							<li data-thumb="images/d3.jpg">
-								<div class="thumb-image"> <img src="images/d3.jpg" data-imagezoom="true" class="img-responsive"> </div>
+								<div class="thumb-image"> <img src= "../../img/zapatos/<?=$id ?>.jpeg"  data-imagezoom="true" class="img-responsive"> </div>
 							</li>
 						</ul>
 						<div class="clearfix"></div>
@@ -616,7 +627,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="footer_agileinfo_w3">
 		<div class="footer_inner_info_w3ls_agileits">
 			<div class="col-md-3 footer-left">
-				<h2><a href="index.html"><span>D</span>owny Shoes </a></h2>
+				<h2><a href="../../"><span>D</span>owny Shoes </a></h2>
 				<p>Lorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora.</p>
 				<ul class="social-nav model-3d-0 footer-social social two">
 					<li>
@@ -650,7 +661,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="col-md-4 sign-gd">
 						<h4>Our <span>Information</span> </h4>
 						<ul>
-							<li><a href="index.html">Home</a></li>
+							<li><a href="../../">Home</a></li>
 							<li><a href="about.html">About</a></li>
 							<li><a href="404.html">Services</a></li>
 							<li><a href="404.html">Short Codes</a></li>

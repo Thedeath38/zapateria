@@ -3,83 +3,90 @@
 namespace izv\data;
 
 /**
- * Zapato
+ * @Entity @Table(name="zapato")
  */
+ 
 class Zapato
 {
+    
+    use \izv\common\Common;
+    
     /**
-     * @var integer
+     * @Id
+     * @Column(type="integer") @GeneratedValue
      */
     private $id;
-
+    
     /**
-     * @var string
+     * @Column(type="string", length=30, nullable=false)
      */
     private $marca;
-
+    
     /**
-     * @var string
+     * @Column(type="string", length=30, nullable=false)
      */
     private $modelo;
-
+    
     /**
-     * @var string
+     * @ManyToOne(targetEntity="Categoria", inversedBy="zapatos")
+     * @JoinColumn(name="idcategoria", referencedColumnName="id", nullable=false)
+    */
+    private $categoria;
+    
+    /**
+     * @ManyToOne(targetEntity="Destinatario", inversedBy="zapatos")
+     * @JoinColumn(name="iddestinatario", referencedColumnName="id", nullable=false)
+    */
+    private $destinatario;
+    
+    /**
+     * @Column(type="decimal", nullable=false, precision=7, scale=2) 
      */
     private $precio;
 
     /**
-     * @var string
+     * @Column(type="string", length=30, nullable=false)
      */
     private $color;
-
+    
     /**
-     * @var string
+     * @Column(type="string", length=30, nullable=true)
      */
     private $cubierta;
-
+    
     /**
-     * @var string
+     * @Column(type="string", length=30, nullable=true)
      */
     private $forro;
-
+    
     /**
-     * @var string
+     * @Column(type="string", length=30, nullable=true)
      */
     private $suela;
-
+    
     /**
-     * @var integer
+     * @Column(type="smallint", nullable=false, precision=2) 
      */
     private $numerodesde;
-
+    
     /**
-     * @var integer
+     * @Column(type="smallint", nullable=false, precision=2) 
      */
     private $numerohasta;
-
+    
     /**
-     * @var string
+     * @Column(type="text", nullable=true)
      */
     private $descripcion;
-
+    
     /**
-     * @var boolean
+     * @Column(type="boolean", nullable=false, precision=1)
      */
     private $disponible;
-
-    /**
-     * @var \izv\data\Categoria
-     */
-    private $categoria;
-
-    /**
-     * @var \izv\data\Destinatario
-     */
-    private $destinatario;
-
-    /**
-     * @var \Doctrine\Common\Collections\Collection
-     */
+    
+    /** 
+     * @OneToMany(targetEntity="Detalle", mappedBy="zapato") 
+    */
     private $detalles;
 
     /**

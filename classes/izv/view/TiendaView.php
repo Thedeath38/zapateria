@@ -10,7 +10,7 @@ class TiendaView extends View {
     function __construct(Model $model) {
         parent::__construct($model);
         $this->getModel()->set('twigFolder', 'twigtemplates/tienda');
-        $this->getModel()->set('twigFile', 'index.html');
+        $this->getModel()->set('twigFile', '_main.twig');
     }
 
     function render($accion) {
