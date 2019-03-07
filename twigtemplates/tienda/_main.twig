@@ -77,3 +77,80 @@
 
 {% block dialog_user_menu %}
 {% endblock %}
+
+
+
+
+
+{% block product_left %}
+<!-- product left -->
+    <div class="side-bar col-md-3">
+    	<div class="search-hotel">
+    		<h3 class="agileits-sear-head">Buscar Aqui</h3>
+    		<form action="#" method="post">
+    			<input type="search" placeholder="Product name..." name="search" required="">
+    			<input type="submit" value=" ">
+    		</form>
+    	</div>
+    	<!-- price range -->
+    	<div class="range">
+    		<h3 class="agileits-sear-head">Price range</h3>
+    		<ul class="dropdown-menu6">
+    			<li>
+    				<div id="slider-range"></div>
+    				<input type="text" id="amount" style="border: 0; color: #ffffff; font-weight: normal;" />
+    			</li>
+    		</ul>
+    	</div>
+    	<!-- //price range -->
+    	
+    	<!--Categorias-->
+  
+    	<div class="left-side">
+    		<h3 class="agileits-sear-head">Categoria</h3>
+    		<ul id="list_categorias">
+		    </ul>
+	    </div>
+    	
+    	<!--//Categorias-->
+    	
+    	<!--Marca-->
+  
+    	<div class="left-side">
+    		<h3 class="agileits-sear-head">Marca</h3>
+    		<ul id="list_marcas">
+		    </ul>
+	    </div>
+    	
+    	<!--//Marca-->
+    	
+    	<!--Colores-->
+  
+    	<div class="left-side">
+    		<h3 class="agileits-sear-head">Colores</h3>
+    		<ul id="list_colores">
+		    </ul>
+	    </div>
+    	
+    	<!--//Colores-->
+    	<!--Numeros-->
+  
+    	<div class="left-side">
+    		<h3 class="agileits-sear-head">Numeros</h3>
+    		<div id="list_numeros">
+		    </div>
+	    </div>
+    	
+    	<!--//Colores-->
+    	<!--Cubierta-->
+  
+    	<div class="left-side">
+    		<h3 class="agileits-sear-head">Materiales</h3>
+    		<ul id="list_materiales">
+		    </ul>
+	    </div>
+    	
+    	<!--//Cubierta-->
+    </div>
+    <!-- //product left -->
+{% endblock %}

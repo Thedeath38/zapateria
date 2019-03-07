@@ -65,6 +65,34 @@ class AjaxController extends Controller {
         
         $zapatos = $this->getModel()->getZapatos($pagina, $orden, $filtro);
     }
+    
+    function getCategorias(){
+        $this->getModel()->getCategorias();
+    }
+    
+    /*color - cubierta - marca - numero - texto*/
+    function getColores(){
+        $this->getModel()->getColores();
+    }
+    
+    function getMateriales(){
+        $this->getModel()->getMateriales();
+    }
+    
+    function getMarcas(){
+        $this->getModel()->getMarcas();
+    }
+    
+    function getNumeros(){
+        $this->getModel()->getNumeros();
+    }
+    
+    
+    function test(){
+        var_dump(Reader::readArray('hola'));
+        exit;
+    }
+    
 }
     
     

@@ -47,7 +47,7 @@ class AjaxModel extends Model {
         if($filtro === null) {
             /*TODO mejorar esto*/
             if($orden===null){
-                $dql = 'SELECT z FROM izv\data\Zapato z JOIN z.categoria c JOIN z.destinatario d ORDER BY d.id, c.id ASC';
+                $dql = 'SELECT z FROM izv\data\Zapato z JOIN z.categoria c JOIN z.destinatario d group by z.modelo,z.marca ORDER BY d.id, c.id ASC';
             }else{
                 $dql = 'SELECT z FROM izv\data\Zapato z JOIN z.categoria c JOIN z.destinatario d ORDER BY z.'. $orden .', d.id, c.id ASC';
             }
@@ -67,6 +67,7 @@ class AjaxModel extends Model {
             ->setMaxResults($limit);
         $pagination = new Pagination($paginator->count(), $pagina, $limit);
         
+        $zapatos = array();
         foreach($paginator as $zapato) {
             $tmp = $zapato->get();
             $tmp['categoria'] = $zapato->getCategoria()->get();
@@ -76,5 +77,85 @@ class AjaxModel extends Model {
         }
         $this->set('zapatos',$zapatos);
     }
-
+    
+    function getCategorias(){
+        $gestor = $this->getDatabase();
+        $resultCat = $gestor->getRepository('izv\data\Categoria')->findBy(array(), array('nombre' => 'ASC'));
+        
+        $categorias = array();
+        foreach($resultCat as $categoria){
+            $categorias[]=$categoria->get();
+        }
+        $this->set('categorias',$categorias);
+    }
+    
+    function getColores(){
+        $gestor = $this->getDatabase();
+        $dql = 'SELECT distinct(z.color) FROM izv\data\Zapato z ORDER BY z.color ASC';
+        $query = $gestor->createQuery($dql);
+        $resultado = $query->getResult();
+        
+        $this->set('colores',$resultado);
+    }
+    
+    function getMateriales(){
+        $gestor = $this->getDatabase();
+        $dql = 'SELECT distinct(z.cubierta) FROM izv\data\Zapato z ORDER BY z.cubierta ASC';
+        $query = $gestor->createQuery($dql);
+        $resultado = $query->getResult();
+        
+        $this->set('materiales',$resultado);
+    }
+    
+    function getMarcas(){
+        $gestor = $this->getDatabase();
+        $dql = 'SELECT distinct(z.marca) FROM izv\data\Zapato z ORDER BY z.marca ASC';
+        $query = $gestor->createQuery($dql);
+        $resultado = $query->getResult();
+        
+        $this->set('marcas',$resultado);
+    }
+    
+    function getNumeros(){
+        $gestor = $this->getDatabase();
+        $dql = 'SELECT min(z.numerodesde),max(z.numerohasta) FROM izv\data\Zapato z';
+        $query = $gestor->createQuery($dql);
+        $resultado = $query->getResult();
+        
+        $this->set('numerodesdehasta',$resultado[0]);
+    }
+    
+    // function getAllNumeros(){
+    //     $gestor = $this->getDatabase();
+    //     $dql = 'SELECT distinct(z.numerodesde) FROM izv\data\Zapato z ORDER BY z.numerodesde ASC';
+    //     $dql2 = 'SELECT distinct(z.numerohasta) FROM izv\data\Zapato z ORDER BY z.numerohasta ASC';
+    //     $query = $gestor->createQuery($dql);
+    //     $query2 = $gestor->createQuery($dql2);
+    //     $resultado = $query->getResult();
+    //     $resultado2 = $query2->getResult();
+        
+    //     $numeros = array();
+    //     $desde = array();
+    //     $hasta = array();
+        
+    //     foreach($resultado as $indice => $numero){
+    //         $desde[]=$numero[1];
+    //     }
+    //     foreach($resultado2 as $indice => $numero){
+    //         $hasta[]=$numero[1];
+    //     }
+    //     $numeros['desde'] = $desde;
+    //     $numeros['hasta'] = $hasta;
+        
+    //     var_dump($numeros);
+        
+    //     exit;
+        
+    //     $this->set('numerodesdehasta',$resultado);
+    // }
+    
+    
+    function getDestinatario(){
+        
+    }
 }

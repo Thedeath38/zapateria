@@ -71,3 +71,10 @@ Stack trace:
   thrown in /home/ubuntu/workspace/wp/wp-content/themes/medic/front-page.php on line 115
 [06-Feb-2019 13:12:51 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/wp/wp-content/themes/medic/front-page.php on line 1000
 [21-Feb-2019 13:07:55 UTC] PHP Warning:  call_user_func() expects parameter 1 to be a valid callback, function 'custom_comments' not found or invalid function name in /home/ubuntu/workspace/wp/wp-includes/class-walker-comment.php on line 174
+[01-Mar-2019 18:30:05 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_excerpt() in /home/ubuntu/workspace/wp/wp-content/themes/medic/front-page.php:367
+Stack trace:
+#0 /home/ubuntu/workspace/wp/wp-includes/template-loader.php(74): include()
+#1 /home/ubuntu/workspace/wp/wp-blog-header.php(19): require_once('/home/ubuntu/wo...')
+#2 /home/ubuntu/workspace/wp/index.php(17): require('/home/ubuntu/wo...')
+#3 {main}
+  thrown in /home/ubuntu/workspace/wp/wp-content/themes/medic/front-page.php on line 367

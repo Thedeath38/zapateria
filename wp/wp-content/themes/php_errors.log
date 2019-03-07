@@ -6,3 +6,7 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in /home/ubuntu/workspace/wp/wp-content/themes/medic/front-page.php on line 2
+[01-Mar-2019 16:29:20 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/ubuntu/workspace/wp/wp-content/themes/medic/front-page.php:2
+Stack trace:
+#0 {main}
+  thrown in /home/ubuntu/workspace/wp/wp-content/themes/medic/front-page.php on line 2

@@ -6,7 +6,7 @@ namespace izv\data;
 class FiltroPesonalizado{
     use \izv\common\Common;
     
-    private $text,$marca,$modelo,$preciodesde,$preciohasta,$color,$cubierta,$forro,$suela,$numero,$disponible,$categoria,$destinatario,$detalles;
+    private $text,$marcas,$preciodesde,$preciohasta,$colores,$cubiertas,$numeros,$categorias,$destinatario;
     
     function __construct(){
         
@@ -15,11 +15,8 @@ class FiltroPesonalizado{
     function getText(){
         return $this->text;
     }
-    function getMarca(){
+    function getMarcas(){
         return $this->marca;
-    }
-    function getModelo(){
-        return $this->modelo;
     }
     function getPreciodesde(){
         return $this->preciodesde;
@@ -27,32 +24,20 @@ class FiltroPesonalizado{
     function getPreciohasta(){
         return $this->preciohasta;
     }
-    function getColor(){
+    function getColores(){
         return $this->color;
     }
-    function getCubierta(){
+    function getCubiertas(){
         return $this->cubierta;
     }
-    function getForro(){
-        return $this->forro;
-    }
-    function getSuela(){
-        return $this->suela;
-    }
-    function getNumero(){
+    function getNumeros(){
         return $this->numero;
     }
-    function getDisponible(){
-        return $this->disponible;
-    }
-    function getCategoria(){
+    function getCategorias(){
         return $this->categoria;
     }
     function getDestinatario(){
         return $this->destinatario;
-    }
-    function getDetalles(){
-        return $this->detalles;
     }
     
     
@@ -60,12 +45,8 @@ class FiltroPesonalizado{
         $this->text = $text;
         return $this;
     }
-    function setMarca($marca){
+    function setMarcas($marca){
         $this->marca = $marca;
-        return $this;
-    }
-    function setModelo($modelo){
-        $this->modelo = $modelo;
         return $this;
     }
     function setPreciodesde($preciodesde){
@@ -76,31 +57,19 @@ class FiltroPesonalizado{
         $this->preciohasta = $preciohasta;
         return $this;
     }
-    function setColor($color){
+    function setColores($color){
         $this->color = $color;
         return $this;
     }
-    function setCubierta($cubierta){
+    function setCubiertas($cubierta){
         $this->cubierta = $cubierta;
         return $this;
     }
-    function setForro($forro){
-        $this->forro = $forro;
-        return $this;
-    }
-    function setSuela($suela){
-        $this->suela = $suela;
-        return $this;
-    }
-    function setNumero($numero){
+    function setNumeros($numero){
         $this->numero = $numero;
         return $this;
     }
-    function setDisponible($disponible){
-        $this->disponible = $disponible;
-        return $this;
-    }
-    function setCategoria($categoria){
+    function setCategorias($categoria){
         $this->categoria = $categoria;
         return $this;
     }
@@ -108,26 +77,17 @@ class FiltroPesonalizado{
         $this->destinatario = $destinatario;
         return $this;
     }
-    function setDetalles($detalles){
-        $this->detalles = $detalles;
-        return $this;
-    }
     
     function isFilterActive(){
         if($this->text !== NULL ||
-            $this->marca !== NULL ||
-            $this->modelo !== NULL ||
+            $this->marcas !== NULL ||
             $this->preciodesde !== NULL ||
             $this->preciohasta !== NULL ||
-            $this->color !== NULL ||
-            $this->cubierta !== NULL ||
-            $this->forro !== NULL ||
-            $this->suela !== NULL ||
-            $this->numero !== NULL ||
-            $this->disponible !== NULL ||
-            $this->categoria !== NULL ||
-            $this->destinatario !== NULL ||
-            $this->detalles !== NULL
+            $this->colores !== NULL ||
+            $this->cubiertas !== NULL ||
+            $this->numeros !== NULL ||
+            $this->categorias !== NULL ||
+            $this->destinatario !== NULL
         ){
             return true;
         }
